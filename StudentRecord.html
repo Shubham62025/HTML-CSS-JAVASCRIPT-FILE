@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Record Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+    }
+
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Student Record Form</h2>
+
+  <form id="studentForm" onsubmit="return validateForm()">
+    <label for="name">Student Name:</label>
+    <input type="text" id="name" name="name">
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+
+    <label for="roll">Roll Number:</label>
+    <input type="text" id="roll" name="roll">
+
+    <label for="course">Course:</label>
+    <input type="text" id="course" name="course">
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age">
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+      <option value="">-- Select Gender --</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const roll = document.getElementById("roll").value.trim();
+      const course = document.getElementById("course").value.trim();
+      const age = document.getElementById("age").value.trim();
+      const gender = document.getElementById("gender").value;
+
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if (!name) {
+        alert("Please enter the student's name.");
+        return false;
+      }
+
+      if (!email || !emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+      }
+
+      if (!roll) {
+        alert("Please enter the roll number.");
+        return false;
+      }
+
+      if (!course) {
+        alert("Please enter the course.");
+        return false;
+      }
+
+      if (!age || isNaN(age) || age < 5 || age > 100) {
+        alert("Please enter a valid age between 5 and 100.");
+        return false;
+      }
+
+      if (!gender) {
+        alert("Please select the gender.");
+        return false;
+      }
+
+      alert("Form submitted successfully!");
+      return true;
+    }
+  </script>
+
+</body>
+</html>
