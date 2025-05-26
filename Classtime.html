@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class Timetable</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    td {
+      background-color: #fff;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f2f2f2;
+    }
+
+    .subject {
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Class Timetable</h1>
+  <table>
+    <tr>
+      <th>Time</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+    </tr>
+    <tr>
+      <td>9:00 - 10:00</td>
+      <td class="subject">DSA</td>
+      <td class="subject">WEBTECH</td>
+      <td class="subject">OS</td>
+      <td class="subject">DBMS</td>
+      <td class="subject">JAVA</td>
+    </tr>
+    <tr>
+      <td>10:00 - 11:00</td>
+      <td class="subject">JAVA</td>
+      <td class="subject">OS</td>
+      <td class="subject">DBMS</td>
+      <td class="subject">DSA</td>
+      <td class="subject">WEBTECH</td>
+    </tr>
+    <tr>
+      <td>11:00 - 12:00</td>
+      <td class="subject">DBMS</td>
+      <td class="subject">DSA</td>
+      <td class="subject">JAVA</td>
+      <td class="subject">WEBTECH</td>
+      <td class="subject">OS</td>
+    </tr>
+    <tr>
+      <td>12:00 - 1:00</td>
+      <td colspan="5"><strong>Lunch Break</strong></td>
+    </tr>
+    <tr>
+      <td>1:00 - 2:00</td>
+      <td class="subject">OS</td>
+      <td class="subject">DBMS</td>
+      <td class="subject">WEBTECH</td>
+      <td class="subject">JAVA</td>
+      <td class="subject">DSA</td>
+    </tr>
+    <tr>
+      <td>2:00 - 3:00</td>
+      <td class="subject">JAVA</td>
+      <td class="subject">WEBTECH</td>
+      <td class="subject">DBMS</td>
+      <td class="subject">WEBTECH</td>
+      <td class="subject">DSA</td>
+    </tr>
+  </table>
+</body>
+</html>
