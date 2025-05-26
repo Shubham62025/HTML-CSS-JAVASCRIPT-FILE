@@ -1,0 +1,25 @@
+<html>
+<head>
+    <script>
+        function clock() {
+            var d = new Date();
+            var hours = d.getHours().toString().padStart(2, '0');
+            var minutes = d.getMinutes().toString().padStart(2, '0');
+            var seconds = d.getSeconds().toString().padStart(2, '0');
+            var time = hours + ":" + minutes + ":" + seconds;
+            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var day = days[d.getDay()];
+            var date = d.getDate().toString().padStart(2, '0');
+            var month = (d.getMonth() + 1).toString().padStart(2, '0');
+            var year = d.getFullYear();
+            var fullDate = day + ", " + date + "/" + month + "/" + year;
+            document.getElementById("tar").innerHTML = time + "<br>" + fullDate;
+        }
+        setInterval(clock, 1000);
+    </script>
+</head>
+<body>
+    <h1 align="center">DIGITAL-CLOCK</h1>
+    <p align="center" id="tar"></p>
+</body>
+</html>
